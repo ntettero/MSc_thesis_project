@@ -42,7 +42,7 @@ for(i in 1:nrow(date)){
              ,plen_comm="plen")
   })
   
-  if(any(stringr::str_detect(tolower(output[[i]]),"error"))){ 
+   if(class(output) == "try-error"){ 
     
     message("error, will sleep for 1 minute")
     Sys.sleep(60)
@@ -54,7 +54,7 @@ for(i in 1:nrow(date)){
                ,fact="debates"
                ,plen_comm="plen")
     })}
-  if(any(stringr::str_detect(tolower(output[[i]]),"error"))){ 
+   if(class(output) == "try-error"){ 
     
     message("another error, will sleep for 2 minutes")
     Sys.sleep(2*60)
@@ -67,7 +67,7 @@ for(i in 1:nrow(date)){
                ,fact="debates"
                ,plen_comm="plen")
     })}
-  if(any(stringr::str_detect(tolower(output[[i]]),"error"))){ 
+   if(class(output) == "try-error"){ 
     
     message("another error, will sleep for 10 minutes")
     Sys.sleep(10*60)
@@ -80,7 +80,7 @@ for(i in 1:nrow(date)){
                ,fact="debates"
                ,plen_comm="plen")
     })}
-  if(any(stringr::str_detect(tolower(output[[i]]),"error"))){ 
+   if(class(output) == "try-error"){ 
     
     message("another error, powernap of 30 minutes")
     Sys.sleep(30*60)
@@ -93,7 +93,7 @@ for(i in 1:nrow(date)){
                ,fact="debates"
                ,plen_comm="comm")
     })}
-  if(any(stringr::str_detect(tolower(output[[i]]),"error"))){ 
+   if(class(output) == "try-error"){ 
     
     stop()
     message("function stopped")
@@ -118,7 +118,7 @@ for(i in 1:nrow(date)){
                          ,plen_comm="plen")
   })
   
-  if(any(stringr::str_detect(tolower(output[[i]]),"error"))){ 
+  if(class(output) == "try-error"){ 
     
     message("error, will sleep for 1 minute")
     Sys.sleep(60)
@@ -128,7 +128,7 @@ for(i in 1:nrow(date)){
                            ,date_range_to=date$datum_end[[i]]
                            ,plen_comm="plen")
     })}
-  if(any(stringr::str_detect(tolower(output[[i]]),"error"))){ 
+   if(class(output) == "try-error"){ 
     
     message("another error, will sleep for 2 minutes")
     Sys.sleep(2*60)
@@ -150,7 +150,7 @@ for(i in 1:nrow(date)){
                            ,date_range_to=date$datum_end[[i]]
                            ,plen_comm="plen")
     })}
-  if(any(stringr::str_detect(tolower(output[[i]]),"error"))){ 
+   if(class(output) == "try-error"){ 
     
     message("another error, powernap of 30 minutes")
     Sys.sleep(30*60)
@@ -161,7 +161,7 @@ for(i in 1:nrow(date)){
                            ,date_range_to=date$datum_end[[i]]
                            ,plen_comm="plen")
     })}
-  if(any(stringr::str_detect(tolower(output[[i]]),"error"))){ 
+   if(class(output) == "try-error"){ 
     
     stop()
     message("function stopped")
@@ -194,7 +194,7 @@ for(i in 1:nrow(date)){
              ,plen_comm="plen")
   })
   
-  if(any(stringr::str_detect(tolower(output[[1]]),"error"))){ 
+   if(class(output) == "try-error"){ 
     
     message("error, will sleep for 1 minute")
     Sys.sleep(60)
@@ -206,7 +206,7 @@ for(i in 1:nrow(date)){
                ,fact="oral_questions_and_interpellations"
                ,plen_comm="plen")
     })}
-  if(any(stringr::str_detect(tolower(output[[1]]),"error"))){ 
+   if(class(output) == "try-error"){ 
     
     message("another error, will sleep for 2 minutes")
     Sys.sleep(2*60)
@@ -219,7 +219,7 @@ for(i in 1:nrow(date)){
                ,fact="oral_questions_and_interpellations"
                ,plen_comm="plen")
     })}
-  if(any(stringr::str_detect(tolower(output[[1]]),"error"))){ 
+   if(class(output) == "try-error"){ 
     
     message("another error, will sleep for 10 minutes")
     Sys.sleep(10*60)
@@ -232,7 +232,7 @@ for(i in 1:nrow(date)){
                ,fact="oral_questions_and_interpellations"
                ,plen_comm="plen")
     })}
-  if(any(stringr::str_detect(tolower(output[[1]]),"error"))){ 
+   if(class(output) == "try-error"){ 
     
     message("another error, powernap of 30 minutes")
     Sys.sleep(30*60)
@@ -245,7 +245,7 @@ for(i in 1:nrow(date)){
                ,fact="oral_questions_and_interpellations"
                ,plen_comm="plen")
     })}
-  if(any(stringr::str_detect(tolower(output[[1]]),"error"))){ 
+   if(class(output) == "try-error"){ 
     
     stop()
     message("function stopped")
@@ -272,7 +272,7 @@ for(i in 1:nrow(date)){
              ,plen_comm="plen")
   })
   
-  if(any(stringr::str_detect(tolower(output[[1]]),"error"))){ 
+   if(class(output) == "try-error"){ 
     
     message("error, will sleep for 1 minute")
     Sys.sleep(60)
@@ -284,7 +284,7 @@ for(i in 1:nrow(date)){
                ,fact="oral_questions_and_interpellations"
                ,plen_comm="plen")
     })}
-  if(any(stringr::str_detect(tolower(output[[1]]),"error"))){ 
+   if(class(output) == "try-error"){ 
     
     message("another error, will sleep for 2 minutes")
     Sys.sleep(2*60)
@@ -297,7 +297,7 @@ for(i in 1:nrow(date)){
                ,fact="oral_questions_and_interpellations"
                ,plen_comm="plen")
     })}
-  if(any(stringr::str_detect(tolower(output[[1]]),"error"))){ 
+   if(class(output) == "try-error"){ 
     
     message("another error, will sleep for 10 minutes")
     Sys.sleep(10*60)
@@ -310,7 +310,7 @@ for(i in 1:nrow(date)){
                ,fact="oral_questions_and_interpellations"
                ,plen_comm="plen")
     })}
-  if(any(stringr::str_detect(tolower(output[[1]]),"error"))){ 
+   if(class(output) == "try-error"){ 
     
     message("another error, powernap of 30 minutes")
     Sys.sleep(30*60)
@@ -323,7 +323,7 @@ for(i in 1:nrow(date)){
                ,fact="oral_questions_and_interpellations"
                ,plen_comm="plen")
     })}
-  if(any(stringr::str_detect(tolower(output[[1]]),"error"))){ 
+   if(class(output) == "try-error"){ 
     
     stop()
     message("function stopped")
@@ -349,7 +349,7 @@ for(i in 1:nrow(date)){
                          ,plen_comm="plen")
   })
   
-  if(any(stringr::str_detect(tolower(output[[1]]),"error"))){
+  if(class(output) == "try-error"){
     
     message("error, will sleep for 1 minute")
     Sys.sleep(60)
@@ -361,7 +361,7 @@ for(i in 1:nrow(date)){
                            ,plen_comm="plen")
     })}
   
-  if(any(stringr::str_detect(tolower(output[[1]]),"error"))){
+   if(class(output) == "try-error"){
     stop()
     message("function stopped")
     
