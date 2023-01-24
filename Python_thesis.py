@@ -151,8 +151,13 @@ def analysis_gil(score):
 annotated['sentiment_gil'] = annotated['sentiment_score_gil'].progress_apply(lambda x: analysis_gil(x))
 print(metrics.classification_report(annotated['label'],annotated['sentiment_gil'], digits = 3))
 
-#agreed labels of the models
-annotated[]
+#testing the agreement of the three models on the sample
+annotated['sentiment_multi'] = annotated['sentiment_score_multi'].progress_apply(lambda x: analysis_multi(x))
+annotated['sentiment_score_DTAI'] = annotated['text'].progress_apply(lambda x: sentiment_score_DTAI(x))
+annotated['sentiment_gil'] = annotated['sentiment_score_gil'].progress_apply(lambda x: analysis_gil(x))
+
+annotated['agreement_models'] = np.where((((annotated['sentiment_multi'])==(annotated['sentiment_score_DTAI']))& (annotated['sentiment_score_DTAI'] == annotated['sentiment_gil'])),annotated['sentiment_multi'],None)
+annotated['agreement_models'].sum() / len(annotated['text'])
 
 # apply multi to full dataset
 df_full['sentiment_score_multi'] = df_full['text'].progress_apply(lambda x: sentiment_score(x))
